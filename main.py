@@ -1,3 +1,8 @@
+
+
+from abc import abstractmethod
+
+
 class Book:
     def __init__(self, title,quantity,author,price):
         self.title = title
@@ -17,7 +22,7 @@ class Book:
         
         return self.__price * self.quantity
         
-
+    @abstractmethod
     def __repr__(self):
        return f"Book: {self.title}, Quantity: {self.quantity}, Author: {self.author}, Price: {self.get_price()}"
     
